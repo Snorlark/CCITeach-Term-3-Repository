@@ -2,7 +2,7 @@
 
 **Developed by: GDG NU - Manila 🔵🔴🟡🟢**
 
-Welcome to the **CCITeach Web Development Basics** repository! This repository contains all the code examples, demonstrations, and resources covered in our web development fundamentals course.
+Welcome to the **CCITeach Web Development Fundamentals** repository! This repository contains all the code examples, demonstrations, and resources covered in our web development fundamentals course.
 
 ## 📋 Table of Contents
 - [Course Overview](#-course-overview)
