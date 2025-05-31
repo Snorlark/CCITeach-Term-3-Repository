@@ -1,0 +1,359 @@
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navigation */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: var(--text-color);
+        transition: var(--transition);
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--text-color);
+        transition: var(--transition);
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        bottom: -8px;
+    }
+
+    .menu-toggle[aria-expanded="true"] .hamburger {
+        background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--background);
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menu Section */
+    .menu-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Special Offers */
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reservations Section */
+    .reservation-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .hero .container {
+        gap: 2rem;
+    }
+
+    .about-grid {
+        gap: 2rem;
+    }
+
+    .about-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reservation-grid {
+        gap: 2rem;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .container {
+        padding: 0 4rem;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .site-header,
+    .cta-buttons,
+    .menu-filters,
+    .reservation-form,
+    .contact-form,
+    .site-footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .menu-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f3f4f6;
+        --light-text: #9ca3af;
+        --background: #1f2937;
+        --light-background: #111827;
+        --border-color: #374151;
+        --accent-color: #f3f4f6;
+    }
+
+    .site-header {
+        background: var(--background);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item,
+    .offer-card,
+    .reservation-form,
+    .contact-form,
+    .testimonial-content {
+        background: var(--light-background);
+    }
+
+    .filter-btn {
+        color: var(--light-text);
+    }
+
+    .newsletter-form input {
+        background: var(--background);
+        color: var(--text-color);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .menu-item:hover {
+        transform: none;
+    }
+
+    .nav-links a::after {
+        transition: none;
+    }
+
+    .filter-btn::after {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+    .btn,
+    .menu-item,
+    .offer-card,
+    .reservation-form,
+    .contact-form {
+        border: 2px solid currentColor;
+    }
+
+    .nav-links a::after,
+    .filter-btn::after {
+        background: currentColor;
+    }
+
+    .social-links a {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .nav-links {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .menu-item-image img {
+        height: 150px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .menu-item:hover {
+        transform: none;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .filter-btn::after {
+        display: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+} 

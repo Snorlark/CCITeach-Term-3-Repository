@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Box Model Demonstration</h1>
+        <p>Understanding the box model is crucial for CSS layout</p>
+    </header>
+
+    <main>
+        <section class="box-model-explanation">
+            <h2>Box Model Components</h2>
+            <div class="box-model-diagram">
+                <div class="margin">
+                    Margin
+                    <div class="border">
+                        Border
+                        <div class="padding">
+                            Padding
+                            <div class="content">
+                                Content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="box-model-examples">
+            <h2>Box Model Examples</h2>
+            
+            <div class="example-box default-box">
+                <h3>Default Box</h3>
+                <p>This box has default margins, padding, and border.</p>
+            </div>
+
+            <div class="example-box custom-margin">
+                <h3>Custom Margin</h3>
+                <p>This box has custom margins (20px all around).</p>
+            </div>
+
+            <div class="example-box custom-padding">
+                <h3>Custom Padding</h3>
+                <p>This box has custom padding (30px all around).</p>
+            </div>
+
+            <div class="example-box custom-border">
+                <h3>Custom Border</h3>
+                <p>This box has a custom border (5px solid blue).</p>
+            </div>
+
+            <div class="example-box box-sizing">
+                <h3>Box Sizing: Border Box</h3>
+                <p>This box uses box-sizing: border-box, so padding and border are included in the width.</p>
+            </div>
+        </section>
+
+        <section class="box-model-interactive">
+            <h2>Interactive Box Model</h2>
+            <div class="interactive-box">
+                <div class="controls">
+                    <label>
+                        Margin:
+                        <input type="range" min="0" max="50" value="20" id="margin-control">
+                        <span class="value">20px</span>
+                    </label>
+                    <label>
+                        Padding:
+                        <input type="range" min="0" max="50" value="20" id="padding-control">
+                        <span class="value">20px</span>
+                    </label>
+                    <label>
+                        Border:
+                        <input type="range" min="0" max="20" value="5" id="border-control">
+                        <span class="value">5px</span>
+                    </label>
+                </div>
+                <div class="demo-box" id="interactive-demo">
+                    <p>Adjust the sliders to see how the box model properties affect this element!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Try modifying these examples in your browser's developer tools!</p>
+    </footer>
+
+    <script>
+        // Interactive box model controls
+        const marginControl = document.getElementById('margin-control');
+        const paddingControl = document.getElementById('padding-control');
+        const borderControl = document.getElementById('border-control');
+        const demoBox = document.getElementById('interactive-demo');
+
+        function updateBox() {
+            const margin = marginControl.value;
+            const padding = paddingControl.value;
+            const border = borderControl.value;
+
+            demoBox.style.margin = `${margin}px`;
+            demoBox.style.padding = `${padding}px`;
+            demoBox.style.border = `${border}px solid #2196F3`;
+
+            // Update value displays
+            marginControl.nextElementSibling.textContent = `${margin}px`;
+            paddingControl.nextElementSibling.textContent = `${padding}px`;
+            borderControl.nextElementSibling.textContent = `${border}px`;
+        }
+
+        marginControl.addEventListener('input', updateBox);
+        paddingControl.addEventListener('input', updateBox);
+        borderControl.addEventListener('input', updateBox);
+    </script>
+</body>
+</html> 

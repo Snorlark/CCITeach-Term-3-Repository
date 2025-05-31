@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML Elements - CCITeach</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header, nav, main, section, article, aside, footer {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+        }
+        header { background-color: #e3f2fd; }
+        nav { background-color: #f3e5f5; }
+        main { background-color: #e8f5e8; }
+        section { background-color: #fff3e0; }
+        article { background-color: #fce4ec; }
+        aside { background-color: #f1f8e9; }
+        footer { background-color: #e0f2f1; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Semantic HTML5 Elements</h1>
+        <p>This is the &lt;header&gt; element - used for introductory content</p>
+    </header>
+
+    <nav>
+        <h2>Navigation</h2>
+        <p>This is the &lt;nav&gt; element - used for navigation links</p>
+        <ul>
+            <li><a href="#main-content">Main Content</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#sidebar">Sidebar</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h2>Main Content Area</h2>
+        <p>This is the &lt;main&gt; element - contains the primary content of the page</p>
+
+        <section>
+            <h3>Section Element</h3>
+            <p>The &lt;section&gt; element represents a section of a document, typically with a heading</p>
+        </section>
+
+        <article id="articles">
+            <h3>Article Element</h3>
+            <p>The &lt;article&gt; element represents a complete, independent piece of content</p>
+            <p>Articles can be:</p>
+            <ul>
+                <li>Blog posts</li>
+                <li>News articles</li>
+                <li>Forum posts</li>
+                <li>Product reviews</li>
+            </ul>
+        </article>
+    </main>
+
+    <aside id="sidebar">
+        <h3>Sidebar Content</h3>
+        <p>The &lt;aside&gt; element contains content related to the main content but separate from it</p>
+        <p>Common uses:</p>
+        <ul>
+            <li>Sidebars</li>
+            <li>Pull quotes</li>
+            <li>Related links</li>
+            <li>Advertisements</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <h3>Footer</h3>
+        <p>The &lt;footer&gt; element contains footer information for its nearest sectioning element</p>
+        <p>&copy; 2024 CCITeach - GDG NU Manila</p>
+    </footer>
+</body>
+</html>

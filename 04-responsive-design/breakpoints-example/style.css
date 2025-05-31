@@ -1,0 +1,374 @@
+/* Base styles and variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --light-gray: #f5f6fa;
+    --spacing-unit: 1rem;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    padding: 0 var(--spacing-unit);
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: var(--spacing-unit);
+}
+
+code {
+    display: block;
+    background: var(--light-gray);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    font-family: monospace;
+    margin: 0.5rem 0;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-unit) 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: var(--secondary-color);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    transition: background-color var(--transition-speed);
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sections */
+.section {
+    padding: var(--spacing-unit) 0;
+}
+
+.section:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+/* Breakpoint Demo */
+.breakpoint-demo {
+    display: grid;
+    gap: var(--spacing-unit);
+    grid-template-columns: 1fr;
+}
+
+.breakpoint-card {
+    background: white;
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.device-preview {
+    background: var(--light-gray);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-unit) 0;
+    overflow: hidden;
+}
+
+.device-preview.small {
+    max-width: 320px;
+}
+
+.device-preview.tablet {
+    max-width: 768px;
+}
+
+.device-preview.desktop {
+    max-width: 1024px;
+}
+
+.device-preview.large {
+    max-width: 1280px;
+}
+
+.content-box {
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+}
+
+/* Content Demo */
+.content-demo {
+    display: grid;
+    gap: var(--spacing-unit);
+}
+
+.text-container,
+.image-container {
+    background: white;
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.image-wrapper {
+    margin: var(--spacing-unit) 0;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Device Demo */
+.device-demo {
+    background: white;
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.device-list {
+    display: grid;
+    gap: var(--spacing-unit);
+    grid-template-columns: 1fr;
+}
+
+.device-item {
+    background: var(--light-gray);
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+}
+
+.device-item ul {
+    list-style-position: inside;
+    margin-left: var(--spacing-unit);
+}
+
+/* Hybrid Demo */
+.hybrid-demo {
+    background: white;
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layout-container {
+    display: grid;
+    gap: var(--spacing-unit);
+    grid-template-columns: 1fr;
+}
+
+.sidebar {
+    background: var(--light-gray);
+    padding: var(--spacing-unit);
+    border-radius: var(--border-radius);
+}
+
+.content-grid {
+    display: grid;
+    gap: var(--spacing-unit);
+    grid-template-columns: 1fr;
+}
+
+.grid-item {
+    background: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-unit);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-unit) 0;
+    text-align: center;
+    margin-top: var(--spacing-unit);
+}
+
+/* Media Queries */
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .breakpoint-demo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .device-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .responsive-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .breakpoint-demo {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .device-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .layout-container {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .responsive-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large screen breakpoint */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .responsive-text {
+        font-size: 1.3rem;
+    }
+}
+
+/* Content-based breakpoints */
+@media (min-width: 35em) {
+    .text-container {
+        max-width: 35em;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 50em) {
+    .image-container {
+        max-width: 50em;
+        margin: 0 auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .main-nav,
+    .site-footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .section {
+        break-inside: avoid;
+    }
+} 

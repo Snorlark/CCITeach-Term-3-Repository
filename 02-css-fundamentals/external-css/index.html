@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External CSS Example - CCITeach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">External CSS Example</h1>
+            <p class="hero-subtitle">Styles loaded from an external CSS file</p>
+            <a href="#content" class="cta-button">Explore Examples</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#selectors" class="nav-link">Selectors</a></li>
+                <li><a href="#layout" class="nav-link">Layout</a></li>
+                <li><a href="#components" class="nav-link">Components</a></li>
+                <li><a href="#animations" class="nav-link">Animations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="content" class="container">
+        <section id="selectors" class="content-section">
+            <h2 class="section-title">CSS Selectors in Action</h2>
+            <div class="info-card">
+                <h3>What is External CSS?</h3>
+                <p>External CSS is stored in separate <code>.css</code> files and linked to HTML documents using the <code>&lt;link&gt;</code> tag. This is the most common and recommended approach for styling websites.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="feature-box">
+                    <div class="icon">🎯</div>
+                    <h4>Better Organization</h4>
+                    <p>Separates content from presentation completely</p>
+                </div>
+                <div class="feature-box">
+                    <div class="icon">🔄</div>
+                    <h4>Reusable</h4>
+                    <p>Same CSS file can be used across multiple pages</p>
+                </div>
+            </div>
+
+            <div class="code-example">
+                <h4>In HTML head section:</h4>
+                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+            </div>
+        </section>
+
+        <section id="layout" class="content-section">
+            <h2 class="section-title">Layout Examples</h2>
+            
+            <div class="layout-demo">
+                <div class="sidebar">
+                    <h4>Sidebar</h4>
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Menu Item 1</a></li>
+                        <li><a href="#">Menu Item 2</a></li>
+                        <li><a href="#">Menu Item 3</a></li>
+                        <li><a href="#">Menu Item 4</a></li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <h4>Main Content Area</h4>
+                    <p>This demonstrates a simple two-column layout created with CSS Flexbox. The sidebar has a fixed width while the main content area takes up the remaining space.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Success</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="components" class="content-section">
+            <h2 class="section-title">Styled Components</h2>
+            
+            <div class="component-showcase">
+                <div class="card-grid">
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">📝</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>HTML Fundamentals</h3>
+                            <p>Learn the building blocks of web development with semantic HTML elements and proper document structure.</p>
+                            <div class="card-meta">
+                                <span class="tag">Beginner</span>
+                                <span class="date">Jan 15, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">🎨</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>CSS Styling</h3>
+                            <p>Master the art of styling web pages with CSS, from basic properties to advanced layout techniques.</p>
+                            <div class="card-meta">
+                                <span class="tag">Intermediate</span>
+                                <span class="date">Jan 20, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">⚡</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>JavaScript Basics</h3>
+                            <p>Add interactivity to your websites with JavaScript programming fundamentals and DOM manipulation.</p>
+                            <div class="card-meta">
+                                <span class="tag">Advanced</span>
+                                <span class="date">Jan 25, 2024</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="button-showcase">
+                <h3>Button Variations</h3>
+                <div class="button-group">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-warning">Warning</button>
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-outline">Outline</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="animations" class="content-section">
+            <h2 class="section-title">CSS Animations & Effects</h2>
+            
+            <div class="animation-examples">
+                <div class="floating-box">
+                    <h4>Floating Animation</h4>
+                    <p>This box has a subtle floating animation</p>
+                </div>
+                
+                <div class="progress-demo">
+                    <h4>Progress Bars</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="85%">
+                            <span>HTML/CSS - 85%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="70%">
+                            <span>JavaScript - 70%</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="60%">
+                            <span>React - 60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hover-effects">
+                    <h4>Hover Effects</h4>
+                    <div class="hover-cards">
+                        <div class="hover-card">
+                            <h5>Scale Effect</h5>
+                            <p>Hover to scale up</p>
+                        </div>
+                        <div class="hover-card rotate">
+                            <h5>Rotate Effect</h5>
+                            <p>Hover to rotate</p>
+                        </div>
+                        <div class="hover-card slide">
+                            <h5>Slide Effect</h5>
+                            <p>Hover to see slide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">External CSS Benefits</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <h4>Better Performance</h4>
+                    <p>CSS files are cached by browsers, improving load times for subsequent pages</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <h4>Easy Maintenance</h4>
+                    <p>Make changes

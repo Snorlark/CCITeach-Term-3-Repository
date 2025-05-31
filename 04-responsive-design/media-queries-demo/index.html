@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Media Queries Demonstration</h1>
+        <p>Understanding different types of media queries and their effects</p>
+    </header>
+
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#viewport">Viewport Queries</a></li>
+            <li><a href="#orientation">Orientation Queries</a></li>
+            <li><a href="#resolution">Resolution Queries</a></li>
+            <li><a href="#print">Print Media</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="viewport" class="query-section">
+            <h2>Viewport Width Queries</h2>
+            <div class="viewport-demo">
+                <div class="responsive-box">Box 1</div>
+                <div class="responsive-box">Box 2</div>
+                <div class="responsive-box">Box 3</div>
+                <div class="responsive-box">Box 4</div>
+            </div>
+            <div class="explanation">
+                <p>Viewport width queries are the most common type of media query.</p>
+                <ul>
+                    <li>min-width: styles apply when viewport is wider than specified width</li>
+                    <li>max-width: styles apply when viewport is narrower than specified width</li>
+                    <li>width: styles apply at exact viewport width</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+@media (min-width: 768px) {
+    /* Styles for tablets and up */
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablets only */
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="orientation" class="query-section">
+            <h2>Orientation Queries</h2>
+            <div class="orientation-demo">
+                <div class="orientation-box">
+                    <p>Try rotating your device to see the changes!</p>
+                    <div class="orientation-indicator">
+                        <span class="portrait">Portrait Mode</span>
+                        <span class="landscape">Landscape Mode</span>
+                    </div>
+                </div>
+            </div>
+            <div class="explanation">
+                <p>Orientation queries help create layouts that work well in both portrait and landscape modes.</p>
+                <ul>
+                    <li>portrait: styles apply when height is greater than width</li>
+                    <li>landscape: styles apply when width is greater than height</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+@media (orientation: portrait) {
+    /* Styles for portrait mode */
+}
+
+@media (orientation: landscape) {
+    /* Styles for landscape mode */
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="resolution" class="query-section">
+            <h2>Resolution Queries</h2>
+            <div class="resolution-demo">
+                <div class="resolution-box">
+                    <p>Current Device Pixel Ratio: <span id="dpr">1</span></p>
+                    <div class="resolution-test">
+                        <div class="high-res">High Resolution</div>
+                        <div class="low-res">Low Resolution</div>
+                    </div>
+                </div>
+            </div>
+            <div class="explanation">
+                <p>Resolution queries help optimize for different screen densities.</p>
+                <ul>
+                    <li>min-resolution: styles apply for higher resolution displays</li>
+                    <li>max-resolution: styles apply for lower resolution displays</li>
+                    <li>resolution: styles apply at exact resolution</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Styles for high-resolution displays */
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="print" class="query-section">
+            <h2>Print Media Queries</h2>
+            <div class="print-demo">
+                <div class="print-box">
+                    <h3>Print Preview</h3>
+                    <p>This section will look different when printed.</p>
+                    <div class="print-only">This text only appears when printing</div>
+                    <div class="screen-only">This text is hidden when printing</div>
+                    <button onclick="window.print()">Print Preview</button>
+                </div>
+            </div>
+            <div class="explanation">
+                <p>Print media queries help optimize content for printing.</p>
+                <ul>
+                    <li>print: styles apply when printing</li>
+                    <li>screen: styles apply for screen display</li>
+                    <li>all: styles apply to all media types</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+@media print {
+    /* Styles for printing */
+    .screen-only {
+        display: none;
+    }
+    body {
+        font-size: 12pt;
+    }
+}</pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Try resizing your browser window and rotating your device to see the media queries in action!</p>
+    </footer>
+
+    <script>
+        // Update device pixel ratio display
+        function updateDPR() {
+            document.getElementById('dpr').textContent = window.devicePixelRatio;
+        }
+        updateDPR();
+        window.addEventListener('resize', updateDPR);
+    </script>
+</body>
+</html> 

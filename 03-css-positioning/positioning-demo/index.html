@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Positioning Demonstration</h1>
+        <p>Understanding different position values and their effects</p>
+    </header>
+
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#static">Static</a></li>
+            <li><a href="#relative">Relative</a></li>
+            <li><a href="#absolute">Absolute</a></li>
+            <li><a href="#fixed">Fixed</a></li>
+            <li><a href="#sticky">Sticky</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="static" class="position-section">
+            <h2>Static Positioning (Default)</h2>
+            <div class="demo-container">
+                <div class="box static-box">Static Box</div>
+                <div class="box static-box">Static Box</div>
+                <div class="box static-box">Static Box</div>
+            </div>
+            <div class="explanation">
+                <p>Static positioning is the default. Elements follow the normal document flow.</p>
+                <ul>
+                    <li>Cannot be moved with top, right, bottom, or left properties</li>
+                    <li>Elements stack in the order they appear in the HTML</li>
+                    <li>Most common positioning type</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="relative" class="position-section">
+            <h2>Relative Positioning</h2>
+            <div class="demo-container">
+                <div class="box relative-box">Relative Box</div>
+                <div class="box relative-box offset">Offset Box</div>
+                <div class="box relative-box">Relative Box</div>
+            </div>
+            <div class="explanation">
+                <p>Relative positioning moves an element relative to its normal position.</p>
+                <ul>
+                    <li>Can be moved using top, right, bottom, or left properties</li>
+                    <li>Original space in document flow is preserved</li>
+                    <li>Often used as a container for absolutely positioned elements</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="absolute" class="position-section">
+            <h2>Absolute Positioning</h2>
+            <div class="demo-container relative-container">
+                <div class="box absolute-box">Absolute Box</div>
+                <div class="box absolute-box positioned">Positioned Box</div>
+                <div class="box absolute-box">Absolute Box</div>
+            </div>
+            <div class="explanation">
+                <p>Absolute positioning removes an element from the normal document flow.</p>
+                <ul>
+                    <li>Positioned relative to nearest positioned ancestor</li>
+                    <li>If no positioned ancestor, uses viewport as reference</li>
+                    <li>Commonly used for overlays, tooltips, and modals</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="fixed" class="position-section">
+            <h2>Fixed Positioning</h2>
+            <div class="demo-container">
+                <div class="box fixed-box">Fixed Box</div>
+                <p class="scroll-text">Scroll to see fixed positioning in action!</p>
+                <div class="box fixed-box positioned">Fixed Positioned Box</div>
+            </div>
+            <div class="explanation">
+                <p>Fixed positioning removes an element from the normal document flow and positions it relative to the viewport.</p>
+                <ul>
+                    <li>Stays in the same position even when scrolling</li>
+                    <li>Commonly used for navigation bars and modals</li>
+                    <li>Always positioned relative to viewport</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sticky" class="position-section">
+            <h2>Sticky Positioning</h2>
+            <div class="sticky-container">
+                <div class="box sticky-box">Sticky Box</div>
+                <div class="scroll-content">
+                    <p>Scroll to see sticky positioning in action!</p>
+                    <p>This box will stick to the top when you scroll past it.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <p>Sticky positioning is a hybrid of relative and fixed positioning.</p>
+                <ul>
+                    <li>Acts like relative positioning until a scroll threshold is met</li>
+                    <li>Then acts like fixed positioning</li>
+                    <li>Commonly used for headers and navigation</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed-overlay">
+        <p>This is a fixed overlay!</p>
+    </div>
+
+    <footer>
+        <p>Try modifying these examples in your browser's developer tools!</p>
+    </footer>
+</body>
+</html> 

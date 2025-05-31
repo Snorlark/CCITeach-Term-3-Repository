@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First Design Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Mobile First Design</h1>
+            <p>Building responsive websites from the ground up</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-list">
+                <li><a href="#principles">Principles</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#grid">Grid</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="principles" class="section">
+            <div class="container">
+                <h2>Mobile First Principles</h2>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Start Small</h3>
+                        <p>Begin with mobile styles as your base, then enhance for larger screens.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Progressive Enhancement</h3>
+                        <p>Add features and complexity as screen size increases.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Content First</h3>
+                        <p>Focus on content and functionality before visual design.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Performance</h3>
+                        <p>Optimize for mobile performance and bandwidth constraints.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="typography" class="section">
+            <div class="container">
+                <h2>Responsive Typography</h2>
+                <div class="typography-demo">
+                    <div class="text-scale">
+                        <h1 class="scale-h1">Heading 1</h1>
+                        <h2 class="scale-h2">Heading 2</h2>
+                        <h3 class="scale-h3">Heading 3</h3>
+                        <p class="scale-p">Body text that scales with viewport size. This demonstrates how typography can be made responsive using relative units and fluid typography techniques.</p>
+                    </div>
+                    <div class="text-columns">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="images" class="section">
+            <div class="container">
+                <h2>Responsive Images</h2>
+                <div class="image-demo">
+                    <div class="image-card">
+                        <img src="https://via.placeholder.com/800x400" alt="Responsive image example" class="responsive-image">
+                        <p>This image scales with its container while maintaining aspect ratio.</p>
+                    </div>
+                    <div class="image-grid">
+                        <img src="https://via.placeholder.com/400x300" alt="Grid image 1" class="grid-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Grid image 2" class="grid-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Grid image 3" class="grid-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Grid image 4" class="grid-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="grid" class="section">
+            <div class="container">
+                <h2>Responsive Grid</h2>
+                <div class="grid-demo">
+                    <div class="grid-item">1</div>
+                    <div class="grid-item">2</div>
+                    <div class="grid-item">3</div>
+                    <div class="grid-item">4</div>
+                    <div class="grid-item">5</div>
+                    <div class="grid-item">6</div>
+                    <div class="grid-item">7</div>
+                    <div class="grid-item">8</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Try resizing your browser window to see the mobile-first design in action!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', 
+                menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+            );
+        });
+    </script>
+</body>
+</html> 

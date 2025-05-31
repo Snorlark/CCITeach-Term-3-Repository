@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists and Links - CCITeach</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .visited {
+            color: #6f42c1;
+        }
+        nav ul {
+            background-color: #343a40;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        nav ul li a:hover {
+            background-color: #495057;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Lists and Links</h1>
+
+    <nav>
+        <h2>Navigation Example</h2>
+        <ul>
+            <li><a href="#unordered">Unordered Lists</a></li>
+            <li><a href="#ordered">Ordered Lists</a></li>
+            <li><a href="#description">Description Lists</a></li>
+            <li><a href="#links">Link Examples</a></li>
+        </ul>
+    </nav>
+
+    <section id="unordered">
+        <h2>Unordered Lists</h2>
+        <div class="example">
+            <h3>Web Development Technologies</h3>
+            <ul>
+                <li>HTML - Structure</li>
+                <li>CSS - Styling</li>
+                <li>JavaScript - Interactivity</li>
+                <li>Git - Version Control</li>
+            </ul>
+
+            <h3>Nested Lists</h3>
+            <ul>
+                <li>Frontend Development
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript ES6+</li>
+                    </ul>
+                </li>
+                <li>Backend Development
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>Database Management</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="ordered">
+        <h2>Ordered Lists</h2>
+        <div class="example">
+            <h3>Steps to Create a Website</h3>
+            <ol>
+                <li>Plan your website structure</li>
+                <li>Create HTML files</li>
+                <li>Add CSS styling</li>
+                <li>Test in different browsers</li>
+                <li>Deploy to web server</li>
+            </ol>
+
+            <h3>Different Numbering Styles</h3>
+            <ol type="A">
+                <li>Uppercase letters</li>
+                <li>Like this example</li>
+            </ol>
+
+            <ol type="i">
+                <li>Lowercase roman numerals</li>
+                <li>Another style option</li>
+            </ol>
+
+            <ol start="5">
+                <li>Starting from number 5</li>
+                <li>Continues normally</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="description">
+        <h2>Description Lists</h2>
+        <div class="example">
+            <h3>Web Development Terms</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>HyperText Markup Language - defines the structure of web pages</dd>
+                
+                <dt>CSS</dt>
+                <dd>Cascading Style Sheets - controls the visual presentation</dd>
+                
+                <dt>Responsive Design</dt>
+                <dd>An approach that makes web pages render well on different devices</dd>
+                
+                <dt>DOM</dt>
+                <dd>Document Object Model - programming interface for HTML documents</dd>
+            </dl>
+        </div>
+    </section>
+
+    <section id="links">
+        <h2>Link Examples</h2>
+        <div class="example">
+            <h3>Different Types of Links</h3>
+            
+            <h4>External Links</h4>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> (opens in new tab)</li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+            </ul>
+
+            <h4>Internal Links (within this page)</h4>
+            <ul>
+                <li><a href="#unordered">Go to Unordered Lists</a></li>
+                <li><a href="#ordered">Go to Ordered Lists</a></li>
+                <li><a href="#top">Back to Top</a></li>
+            </ul>
+
+            <h4>Email and Phone Links</h4>
+            <ul>
+                <li><a href="mailto:gdgoc.numanila@gmail.com">Send Email to GDG NU Manila</a></li>
+                <li><a href="tel:+1234567890">Call Us</a></li>
+            </ul>
+
+            <h4>Download Links</h4>
+            <ul>
+                <li><a href="#" download="cciteach-notes.pdf">Download Course Notes</a></li>
+                <li><a href="#" download="examples.zip">Download Code Examples</a></li>
+            </ul>
+
+            <h4>Link States</h4>
+            <p>Links have different states:</p>
+            <ul>
+                <li><a href="#">Normal link</a></li>
+                <li><a href="#" class="visited">Visited link (simulated)</a></li>
+                <li>Hover over links to see the hover effect</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Practice Exercise</h2>
+        <p>Try creating your own lists and links! Practice makes perfect.</p>
+        <p><a href="../README.md">Back to Course Overview</a></p>
+    </footer>
+</body>
+</html>

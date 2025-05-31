@@ -1,0 +1,211 @@
+/* Mobile First Responsive Design */
+
+/* Base Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: var(--text-color);
+        position: relative;
+        transition: var(--transition);
+    }
+
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--text-color);
+        transition: var(--transition);
+    }
+
+    .menu-toggle span::before {
+        top: -8px;
+    }
+
+    .menu-toggle span::after {
+        bottom: -8px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--background);
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .post-card.featured {
+        grid-column: auto;
+    }
+
+    .post-card.featured .post-image img {
+        height: 200px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-card.featured {
+        grid-column: span 2;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 4rem;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .post-card.featured {
+        grid-column: span 2;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large Desktop Styles (1440px and up) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .site-header,
+    .newsletter,
+    .site-footer {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .post-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .post-image {
+        display: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a1a1a;
+        --light-background: #2d2d2d;
+        --text-color: #e5e5e5;
+        --light-text: #a3a3a3;
+        --border-color: #404040;
+    }
+
+    .site-header {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-card:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .post-card:hover {
+        transform: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+    .post-card,
+    .category-card,
+    .newsletter-form button {
+        border: 2px solid currentColor;
+    }
+
+    .post-card:hover,
+    .category-card:hover {
+        outline: 2px solid currentColor;
+    }
+} 

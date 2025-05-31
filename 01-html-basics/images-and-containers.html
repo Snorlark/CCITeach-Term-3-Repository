@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images and Containers - CCITeach</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .image-placeholder {
+            width: 200px;
+            height: 150px;
+            background-color: #e9ecef;
+            border: 2px dashed #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: bold;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+            color: #6c757d;
+            margin-top: 8px;
+        }
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .div-example {
+            background-color: #e3f2fd;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .span-example {
+            background-color: #ffeb3b;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Images and Container Elements</h1>
+
+    <div class="container">
+        <h2>Working with Images</h2>
+        
+        <h3>Basic Image Usage</h3>
+        <div class="highlight">
+            <p><strong>Note:</strong> In a real project, replace the placeholder with actual image files!</p>
+        </div>
+
+        <figure>
+            <div class="image-placeholder">
+                Image Placeholder<br>
+                (200x150px)
+            </div>
+            <figcaption>Figure 1: Example of an image with caption using &lt;figure&gt; and &lt;figcaption&gt;</figcaption>
+        </figure>
+
+        <h3>Image Attributes</h3>
+        <div class="flex-container">
+            <div class="image-placeholder" style="width: 150px; height: 100px;">
+                Logo Placeholder
+            </div>
+            <div>
+                <p><strong>Essential Image Attributes:</strong></p>
+                <ul>
+                    <li><code>src</code> - Image source path</li>
+                    <li><code>alt</code> - Alternative text for accessibility</li>
+                    <li><code>width</code> & <code>height</code> - Dimensions</li>
+                    <li><code>title</code> - Tooltip text</li>
+                </ul>
+                <p><strong>Example:</strong></p>
+                <code>&lt;img src="logo.png" alt="Company Logo" width="150" height="100" title="Our Logo"&gt;</code>
+            </div>
+        </div>
+
+        <h3>Responsive Images</h3>
+        <div class="image-placeholder responsive-img" style="width: 100%; max-width: 400px; height: 200px;">
+            Responsive Image Placeholder<br>
+            (Scales with container)
+        </div>
+        <p><em>This image uses CSS to be responsive: <code>max-width: 100%; height: auto;</code></em></p>
+    </div>
+
+    <div class="container">
+        <h2>Container Elements</h2>
+
+        <h3>The &lt;div&gt; Element</h3>
+        <p>The <code>&lt;div&gt;</code> element is a block-level container with no semantic meaning:</p>
+        
+        <div class="div-example">
+            <h4>This is inside a div</h4>
+            <p>Div elements are commonly used for:</p>
+            <ul>
+                <li>Grouping elements for styling</li>
+                <li>Creating layout structures</li>
+                <li>Applying CSS classes or IDs</li>
+            </ul>
+        </div>
+
+        <div class="div-example">
+            <h4>Another div example</h4>
+            <p>Each div is a separate block-level element.</p>
+        </div>
+
+        <h3>The &lt;span&gt; Element</h3>
+        <p>The <code>&lt;span&gt;</code> element is an inline container. You can use it to 
+        <span class="span-example">highlight specific words</span> or 
+        <span style="color: #dc3545; font-weight: bold;">apply styling</span> to parts of text.</p>
+
+        <p>Here's another example: <span class="span-example">This span has a yellow background</span> while the rest of the paragraph remains normal.</p>
+
+        <h3>Nested Containers</h3>
+        <div class="div-example">
+            <h4>Outer Container</h4>
+            <p>This div contains other elements:</p>
+            <div style="background-color: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                <h5>Inner Container</h5>
+                <p>This is a div inside another div. You can nest containers to create complex layouts.</p>
+                <span style="background-color: #ffcdd2; padding: 5px;">And this span is inside the inner div!</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Practical Examples</h2>
+
+        <h3>Card Layout Using Containers</h3>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 250px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div class="image-placeholder" style="width: 100%; height: 120px; margin-bottom: 15px;">
+                    Card Image
+                </div>
+                <h4>Card Title</h4>
+                <p>This is a card layout created using div containers and CSS styling.</p>
+                <a href="#" style="color: #007bff; text-decoration: none;">Read More →</a>
+            </div>
+
+            <div style="flex: 1; min-width: 250px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div class="image-placeholder" style="width: 100%; height: 120px; margin-bottom: 15px;">
+                    Card Image
+                </div>
+                <h4>Another Card</h4>
+                <p>Multiple cards can be arranged using flexbox or CSS grid layouts.</p>
+                <a href="#" style="color: #007bff; text-decoration: none;">Read More →</a>
+            </div>
+        </div>
+
+        <h3>Image Gallery Example</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0;">
+            <figure style="margin: 0;">
+                <div class="image-placeholder" style="width: 100%; height: 120px;">
+                    Gallery Image 1
+                </div>
+                <figcaption style="font-size: 0.9em;">Caption 1</figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <div class="image-placeholder" style="width: 100%; height: 120px;">
+                    Gallery Image 2
+                </div>
+                <figcaption style="font-size: 0.9em;">Caption 2</figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <div class="image-placeholder" style="width: 100%; height: 120px;">
+                    Gallery Image 3
+                </div>
+                <figcaption style="font-size: 0.9em;">Caption 3</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Best Practices</h2>
+        <div class="highlight">
+            <h3>Images:</h3>
+            <ul>
+                <li>Always include <code>alt</code> attributes for accessibility</li>
+                <li>Use appropriate file formats (JPEG for photos, PNG for graphics)</li>
+                <li>Optimize images for web (compress file sizes)</li>
+                <li>Consider responsive images for different screen sizes</li>
+            </ul>
+
+            <h3>Containers:</h3>
+            <ul>
+                <li>Use semantic elements when possible (header, main, section, etc.)</li>
+                <li>Use <code>&lt;div&gt;</code> for styling and layout purposes</li>
+                <li>Use <code>&lt;span&gt;</code> for inline styling within text</li>
+                <li>Keep your HTML structure clean and well-organized</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #dee2e6;">
+        <p>Practice creating your own image galleries and container layouts!</p>
+        <p><a href="../README.md">← Back to Course Overview</a></p>
+    </footer>
+</body>
+</html>

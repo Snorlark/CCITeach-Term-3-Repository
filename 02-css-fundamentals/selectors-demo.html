@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* ID Selector */
+        #main-title {
+            color: #2196F3;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Descendant Selector */
+        article p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        /* Child Selector */
+        ul > li {
+            margin-bottom: 0.5rem;
+            list-style-type: square;
+        }
+
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        /* Pseudo-class Selector */
+        button:hover {
+            background-color: #1976D2;
+            cursor: pointer;
+        }
+
+        /* Pseudo-element Selector */
+        p::first-line {
+            font-weight: bold;
+        }
+
+        /* Multiple Selectors */
+        h1, h2, h3 {
+            color: #1565C0;
+            margin-bottom: 1rem;
+        }
+
+        /* Combining Selectors */
+        article.highlight p {
+            background-color: #E3F2FD;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selectors Demonstration</h1>
+
+    <article class="highlight">
+        <h2>Understanding CSS Selectors</h2>
+        <p>CSS selectors are patterns used to select and style HTML elements. They are fundamental to CSS and allow you to target specific elements on your webpage.</p>
+        
+        <h3>Common Selector Types</h3>
+        <ul>
+            <li>Element Selectors (e.g., p, h1, div)</li>
+            <li>Class Selectors (e.g., .highlight)</li>
+            <li>ID Selectors (e.g., #main-title)</li>
+            <li>Attribute Selectors (e.g., [type="text"])</li>
+        </ul>
+
+        <h3>Try it out!</h3>
+        <form>
+            <input type="text" placeholder="Type something here...">
+            <button type="button">Hover over me!</button>
+        </form>
+
+        <p>This paragraph demonstrates the ::first-line pseudo-element. The first line of this paragraph will be bold, while the rest remains normal. This is a great way to add special styling to the first line of text in a paragraph.</p>
+    </article>
+
+    <article>
+        <h2>Selector Combinations</h2>
+        <p>You can combine different types of selectors to create more specific targeting rules.</p>
+        <p>This paragraph is styled using a descendant selector (article p).</p>
+    </article>
+
+    <div class="highlight">
+        <p>This paragraph is inside a div with class "highlight" but doesn't have the special styling of the article.highlight p selector.</p>
+    </div>
+</body>
+</html> 

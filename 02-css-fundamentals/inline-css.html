@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline CSS Examples - CCITeach</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f8f9fa;">
+    
+    <h1 style="color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px;">Inline CSS Examples</h1>
+    
+    <div style="background-color: #e8f4fd; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 5px solid #3498db;">
+        <h2 style="color: #2980b9; margin-top: 0;">What is Inline CSS?</h2>
+        <p style="line-height: 1.6; color: #34495e;">
+            Inline CSS is applied directly to HTML elements using the <strong style="background-color: #fff3cd; padding: 2px 4px; border-radius: 3px;">style</strong> attribute. 
+            While it has the highest specificity, it's generally <em style="color: #e74c3c;">not recommended</em> for large projects 
+            because it mixes content with presentation.
+        </p>
+    </div>
+
+    <h2 style="color: #27ae60; border-bottom: 2px solid #27ae60; padding-bottom: 5px;">Text Styling Examples</h2>
+    
+    <p style="font-size: 18px; color: #2c3e50; font-weight: bold;">This paragraph has larger, bold text.</p>
+    
+    <p style="font-style: italic; color: #7f8c8d; text-decoration: underline;">This text is italic, gray, and underlined.</p>
+    
+    <p style="text-transform: uppercase; letter-spacing: 2px; color: #e74c3c;">This text is uppercase with letter spacing.</p>
+    
+    <p style="text-align: center; background-color: #f39c12; color: white; padding: 15px; border-radius: 25px; font-size: 16px;">
+        Centered text with background color and rounded corners
+    </p>
+
+    <h2 style="color: #8e44ad; border-bottom: 2px solid #8e44ad; padding-bottom: 5px;">Box Styling Examples</h2>
+    
+    <div style="background-color: #ecf0f1; border: 2px solid #95a5a6; padding: 20px; margin: 15px 0; border-radius: 10px;">
+        <h3 style="margin-top: 0; color: #2c3e50;">Box with Border and Padding</h3>
+        <p style="margin-bottom: 0; line-height: 1.5;">This div has a gray background, border, padding, and rounded corners.</p>
+    </div>
+
+    <div style="background: linear-gradient(45deg, #3498db, #2ecc71); color: white; padding: 25px; text-align: center; border-radius: 15px; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        <h3 style="margin: 0 0 10px 0;">Gradient Background with Shadow</h3>
+        <p style="margin: 0; font-size: 14px; opacity: 0.9;">This box uses a CSS gradient and drop shadow effect.</p>
+    </div>
+
+    <h2 style="color: #e67e22; border-bottom: 2px solid #e67e22; padding-bottom: 5px;">List Styling Examples</h2>
+    
+    <ul style="background-color: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <li style="margin: 10px 0; padding: 8px; background-color: #e8f5e9; border-left: 4px solid #4caf50; border-radius: 4px;">
+            First list item with green accent
+        </li>
+        <li style="margin: 10px 0; padding: 8px; background-color: #fff3e0; border-left: 4px solid #ff9800; border-radius: 4px;">
+            Second list item with orange accent
+        </li>
+        <li style="margin: 10px 0; padding: 8px; background-color: #f3e5f5; border-left: 4px solid #9c27b0; border-radius: 4px;">
+            Third list item with purple accent
+        </li>
+    </ul>
+
+    <h2 style="color: #16a085; border-bottom: 2px solid #16a085; padding-bottom: 5px;">Button and Link Examples</h2>
+    
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="#" style="display: inline-block; background-color: #3498db; color: white; padding: 12px 24px; text-decoration: none; border-radius: 25px; font-weight: bold; margin: 0 10px; transition: background-color 0.3s;">Primary Button</a>
+        
+        <a href="#" style="display: inline-block; background-color: transparent; color: #3498db; padding: 12px 24px; text-decoration: none; border: 2px solid #3498db; border-radius: 25px; font-weight: bold; margin: 0 10px;">Secondary Button</a>
+        
+        <a href="#" style="display: inline-block; background-color: #e74c3c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 0 10px;">Danger Button</a>
+    </div>
+
+    <h2 style="color: #c0392b; border-bottom: 2px solid #c0392b; padding-bottom: 5px;">Image Styling Example</h2>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <div style="width: 200px; height: 150px; background-color: #ecf0f1; border: 3px solid #3498db; border-radius: 50%; display: inline-block; line-height: 150px; text-align: center; color: #7f8c8d; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            Circular Image Placeholder
+        </div>
+    </div>
+
+    <div style="background-color: #fff5f5; border: 1px solid #fcc; padding: 20px; border-radius: 8px; margin: 30px 0;">
+        <h2 style="color: #e74c3c; margin-top: 0;">⚠️ Important Note</h2>
+        <p style="margin-bottom: 0; line-height: 1.6;">
+            While inline CSS works and has the highest specificity, it's <strong>not recommended</strong> for production websites because:
+        </p>
+        <ul style="margin: 10px 0 0 20px; line-height: 1.6;">
+            <li>It mixes content (HTML) with presentation (CSS)</li>
+            <li>It's hard to maintain and update</li>
+            <li>It makes HTML files larger and harder to read</li>
+            <li>You can't reuse styles across multiple elements</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #bdc3c7;">
+        <p style="color: #7f8c8d; font-style: italic;">
+            Next: Learn about <a href="internal-css.html" style="color: #3498db; text-decoration: none; font-weight: bold;">Internal CSS</a> and <a href="external-css/" style="color: #3498db; text-decoration: none; font-weight: bold;">External CSS</a>
+        </p>
+    </div>
+
+</body>
+</html>
