@@ -217,6 +217,9 @@ We welcome contributions from students and instructors! Here's how you can contr
 - Facebook: [https://www.facebook.com/gdgoc.numanila](https://www.facebook.com/gdgoc.numanila)
 - Email: gdgoc.numanila@gmail.com
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
