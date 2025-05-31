@@ -1,4 +1,4 @@
-# 🌐 CCITeach Web Development Basics Repository
+# 🌐 CCITeach Term 3: Web Development Fundamentals Repository
 
 **Developed by: GDG NU - Manila 🔵🔴🟡🟢**
 
